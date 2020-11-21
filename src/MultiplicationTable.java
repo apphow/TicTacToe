@@ -17,14 +17,14 @@ public class MultiplicationTable {
         int columns = scan.nextInt();
         int numAfterMultiplied;
         for (int i = 1; i <= rows; i++) {
-            if (i < 10) System.out.print(i + " :");
-            else System.out.print(i + ":");
+            if (i < 10) System.out.print(" ");
+             System.out.print(i + ":");
 
             for (int j = 1; j <= columns; j++) {
                 numAfterMultiplied = i * j;
-                System.out.print(" " + numAfterMultiplied);
                 if (numAfterMultiplied < 10) System.out.print("  ");
                 else if (numAfterMultiplied < 100) System.out.print(" ");
+                System.out.print(numAfterMultiplied + " ");
             }
             System.out.println();
         }
