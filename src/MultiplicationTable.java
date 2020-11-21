@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class MultiplicationTable {
 
     // multiplication table with 1 row\
@@ -8,7 +10,11 @@ public class MultiplicationTable {
     }
 
     public static void twoDmultiplicationTable() {
-        int rows = 12, columns = 12;
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please enter 2 number for columns and rows. ");
+        int rows = scan.nextInt();
+        int columns = scan.nextInt();
         int numAfterMultiplied;
         for (int i = 1; i <= rows; i++) {
             if (i < 10) System.out.print(i + " :");
@@ -25,7 +31,7 @@ public class MultiplicationTable {
     }
 
     public static void main(String[] args) {
-        multiplicationTable(10);
+       // multiplicationTable(10);
         twoDmultiplicationTable();
     }
 }
